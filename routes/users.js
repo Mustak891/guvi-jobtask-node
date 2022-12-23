@@ -89,24 +89,24 @@ router.get('/auth', auth, async (req, res) => {
 })
 
 
-router.get('/user/:email', async (req, res) => {
-    try {
+// router.get('/user/:email', async (req, res) => {
+//     try {
 
-        const email = req.params.email
+//         const email = req.params.email
 
-        const user = await User.aggregate(
-            [{
-                $match: {
-                    email: email
-                }
-            }]
-        );
-        res.status(200).send(user);
-    }
-    catch (err) {
-        console.log(err);
-    }
-})
+//         const user = await User.aggregate(
+//             [{
+//                 $match: {
+//                     email: email
+//                 }
+//             }]
+//         );
+//         res.status(200).send(user);
+//     }
+//     catch (err) {
+//         console.log(err);
+//     }
+// })
 
 
 //update 
