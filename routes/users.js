@@ -94,11 +94,6 @@ router.get('/user/:email', async (req, res) => {
 
         const email = req.params.email
 
-        // if (req.query.email) {
-        //     const reqquery = await User.find({email: email})
-        //     res.status(200).send(reqquery)
-        //     console.log(reqquery)
-        // }
         const user = await User.aggregate(
             [{
                 $match: {
